@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { useConversationContext } from "../hooks/useConversationContext";
 import ConversationMessage from "./ConversationMessage";
-import { fetchData } from "./fetchData";
 const { Configuration, OpenAIApi } = require("openai");
 
 const ConversationPage = () => {
@@ -60,7 +59,7 @@ const ConversationPage = () => {
         }
       }
     };
-    
+
     handleSubmit();
   }, [conversations, dispatch, openai]);
 
