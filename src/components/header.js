@@ -13,12 +13,20 @@ const Header = () => {
             About
           </Link>
           <Link
-            to="https://www.github.com"
+            to="https://github.com/LordHarsh/humanoid-chatbot-webapp"
             target="_blank"
             className="text-gray-300 hover:text-white"
             as="a"
           >
             Source Code
+          </Link>
+          <Link
+            to="https://colab.research.google.com/drive/1H6fAAomocTLyMaLO2X0IQW7a2VFQc4xR?usp=sharing"
+            target="_blank"
+            className="text-gray-300 hover:text-white"
+            as="a"
+          >
+            Google Colab
           </Link>
         </nav>
       </div>

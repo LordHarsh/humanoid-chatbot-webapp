@@ -14,7 +14,7 @@ export const conversationReducer = (state, action) => {
       };
     case "CLEAR_CHAT":
       return {
-        conversations: [{"role": "system", "content": "You are a helpful assistant."}],
+        conversations: [{"role": "system", "content": "You are a helpful professor. You have deep knowledge about engineering and can answer related questions."}],
       };
     default:
       return state;
@@ -23,7 +23,7 @@ export const conversationReducer = (state, action) => {
 
 export const ConversationContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(conversationReducer, {
-    conversations: [{"role": "system", "content": "You are a helpful assistant."}],
+    conversations: [{"role": "system", "content": "You are a helpful engineering professor."}],
   });
 
   // useEffect(() => {
