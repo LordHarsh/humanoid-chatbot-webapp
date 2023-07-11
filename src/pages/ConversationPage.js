@@ -86,7 +86,7 @@ const ConversationPage = () => {
           ))}
           <div ref={messagesEndRef} />
         </div>
-        <form onSubmit={handleSubmit} className="flex mt-10 py-5">
+        <form onSubmit={handleSubmit} autocomplete="off" className="flex mt-10 py-5">
           <input
             type="text"
             name="message"
