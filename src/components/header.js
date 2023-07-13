@@ -1,33 +1,46 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { FaGithub, FaGoogle, FaHome } from "react-icons/fa";
 
 const Header = () => {
   return (
-    <header className="bg-gray-800 fixed top-0 w-full">
+    <header className="bg-gray-800 top-0 w-full">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <Link to="/" className="text-white text-xl font-bold">
+        <NavLink
+          to="/"
+          exact
+          className="text-white text-xl font-bold flex items-center"
+          activeClassName="text-white"
+        >
+          <FaHome className="mr-2" />
           Humanoid Chatbot
-        </Link>
-        <nav className="space-x-4">
-          <Link to="/about" className="text-gray-300 hover:text-white">
+        </NavLink>
+        <nav className="space-x-4 flex">
+          <NavLink
+            to="/about"
+            className="text-gray-300 hover:text-white text-lg transition duration-300 ease-in-out"
+            activeClassName="text-white"
+          >
             About
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="https://github.com/LordHarsh/humanoid-chatbot-webapp"
             target="_blank"
-            className="text-gray-300 hover:text-white"
+            className="text-gray-300 hover:text-white text-lg transition duration-300 ease-in-out flex items-center"
             as="a"
           >
+            <FaGithub className="mr-1" />
             GitHub
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="https://colab.research.google.com/drive/1H6fAAomocTLyMaLO2X0IQW7a2VFQc4xR?usp=sharing"
             target="_blank"
-            className="text-gray-300 hover:text-white"
+            className="text-gray-300 hover:text-white text-lg transition duration-300 ease-in-out flex items-center"
             as="a"
           >
-            Google Colab
-          </Link>
+            <FaGoogle className="mr-1" />
+            Colab
+          </NavLink>
         </nav>
       </div>
     </header>

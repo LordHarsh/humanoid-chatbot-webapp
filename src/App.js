@@ -6,7 +6,7 @@ import ConversationPage from "./pages/ConversationPage";
 import AboutPage from "./pages/AboutPage";
 function App() {
   return (
-    <div className="App">
+    <div className="App h-screen">
       <BrowserRouter>
         <Header />
         <div>

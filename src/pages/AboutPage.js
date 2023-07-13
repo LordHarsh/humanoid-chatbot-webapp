@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const AboutPage = () => {
   return (
-    <div className="container mx-auto px-6 py-4 mt-20">
+    <div className="container mx-auto px-12 py-4 mt-10">
       <h1 className="text-4xl font-bold text-gray-800 text-center">
         SRM Humanoid Profesor
       </h1>
