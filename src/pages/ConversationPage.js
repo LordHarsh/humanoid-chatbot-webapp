@@ -49,7 +49,7 @@ const ConversationPage = () => {
       console.log(model_message);
       await dispatch({
         type: "ADD_CHAT",
-        payload: { role: "assistant", content: model_message.trim() },
+        payload: { role: "assistant", content: model_message },
       });
       console.log(conversations);
       input.value = "";
@@ -78,15 +78,15 @@ const ConversationPage = () => {
     }
   };
   return (
-    <div className="container mx-auto px-6 py-4 h-screen flex flex-col mt-10">
-      <div className="bg-white rounded-lg shadow-lg p-4 mt-4 w-full md:w-97 mx-auto flex-grow">
-        <div className="overflow-y-auto h-full">
+    <div className="container mx-auto px-6 flex flex-col py-2 mt-2">
+      <div className="bg-white rounded-3xl shadow-lg p-4 w-full md:w-97 mx-auto">
+        <div className="overflow-y-auto h-96">
           {conversations.map((message, index) => (
             <ConversationMessage key={index} message={message} />
           ))}
           <div ref={messagesEndRef} />
         </div>
-        <form onSubmit={handleSubmit} autocomplete="off" className="flex mt-10 py-5">
+        <form onSubmit={handleSubmit} autocomplete="off" className="flex px-6 py-5">
           <input
             type="text"
             name="message"
