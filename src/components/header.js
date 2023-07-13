@@ -6,7 +6,7 @@ const Header = () => {
     <header className="bg-gray-800 fixed top-0 w-full">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <Link to="/" className="text-white text-xl font-bold">
-          Humanoid Chatbot Test
+          Humanoid Chatbot
         </Link>
         <nav className="space-x-4">
           <Link to="/about" className="text-gray-300 hover:text-white">
@@ -18,7 +18,7 @@ const Header = () => {
             className="text-gray-300 hover:text-white"
             as="a"
           >
-            Source Code
+            GitHub
           </Link>
           <Link
             to="https://colab.research.google.com/drive/1H6fAAomocTLyMaLO2X0IQW7a2VFQc4xR?usp=sharing"
